@@ -45,17 +45,14 @@
 <script>
      var catIconArr = ['🐈‍⬛', '🐈', '😻', '😹', '🐱']
      var badCatIconArr = ['🙀', '😿', '😾']
- console.log(randomCatIcon)
  var titles = document.querySelectorAll('.titles')
  var deleteBtn = document.querySelectorAll('.fa-close')
       for (let i = 0; i < titles.length; i++) {
     var randomCatIcon = catIconArr[Math.floor(Math.random() * 5)]
-        console.log(titles[i].textContent)
         titles[i].textContent = randomCatIcon + ' ' + titles[i].textContent
       }
       for (let i = 0; i < deleteBtn.length; i++) {
     var randomBadCatIcon = badCatIconArr[Math.floor(Math.random() * 3)]
-        console.log(deleteBtn[i].textContent)
         deleteBtn[i].textContent = randomBadCatIcon
       }
 </script>

@@ -1,0 +1,18 @@
+html {
+    background-image: url('https://c.tenor.com/vb0GTerCLNkAAAAM/cute-anime-cat-gif.gif');
+    background-size: contain ;
+    background-repeat: no-repeat ;
+    background-position-y: center ;
+    background-size: cover ;
+    height: 95%;
+    width: 100%;
+    opacity: .8;
+}
+
+.form{
+    opacity: 1.0;
+}
+
+body {
+    opacity: 0.9;
+}
