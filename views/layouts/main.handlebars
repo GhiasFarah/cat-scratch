@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fund My Post!</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/styles.css">
+<link rel="icon" href="https://i.pinimg.com/originals/c8/8a/c7/c88ac78ed012b6b98b634297c58c8c8f.gif">
+</head>
+
+<body>
+
+  <div class="flex-column justify-space-around container">
+    <header class="display-flex justify-space-between align-center p-2 row">
+      <h1 class="col col-10">
+        <a class="catPost" href="/post">Post a Cute Cat Story </a>
+      </h1>
+      <nav class="col col-2" style="float: right;">
+
+        {{#if logged_in}}
+        {{!-- <a href="/">Home</a> --}}
+        <a href="/"><button class="btn btn-lg btn-primary">Home</button></a> |
+        <button class="btn btn-lg btn-primary" id="logout">logout</button>
+        {{else}}
+        <a href="/login"><button class="btn btn-lg btn-primary">login</button></a>
+        {{/if}}
+      </nav>
+    </header>
+    <main class="container container-fluid mt-5">
+
+      {{{ body }}}
+    </main>
+    <footer class="container">
+
+    </footer>
+  </div>
+
+
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  <script>
+    var catIconArr = ['🐈‍⬛', '🐈', '😻', '😹', '🐱']
+
+    console.log(randomCatIcon)
+    var postLink = document.querySelector('.catPost')
+
+    var randomCatIcon = catIconArr[Math.floor(Math.random() * 5)]
+
+    postLink.textContent = postLink.textContent + ' ' + randomCatIcon
+
+  </script>
+  {{/if}}
+</body>
+
+</html>

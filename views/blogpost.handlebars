@@ -1,0 +1,27 @@
+<div class="text-center">
+  <h2>{{name}}</h2>
+  <h1 class="catIcon"></h1>
+  <p>{{description}}</p>
+  <p>Created by {{user.name}} on {{format_date date_created}}</p>
+</div>
+  <div class="ajax-loader">
+	<div class="paw"><i class="fas fa-paw"></i></div>
+	<div class="paw"><i class="fas fa-paw"></i></div>
+	<div class="paw"><i class="fas fa-paw"></i></div>
+	<div class="paw"><i class="fas fa-paw"></i></div>
+	<div class="paw"><i class="fas fa-paw"></i></div>
+	{{!-- <div class="paw"><i class="fas fa-paw"></i></div>  
+  <div class="paw"><i class="fas fa-paw"></i></div>
+	<div class="paw"><i class="fas fa-paw"></i></div> --}}
+</div>
+  <script>
+       var catIconArr = ['🐈‍⬛', '🐈', '😻', '😹', '🐱']
+
+ console.log(randomCatIcon)
+ var catHeader = document.querySelector('.catIcon')
+      
+    var randomCatIcon = catIconArr[Math.floor(Math.random() * 5)]
+
+        catHeader.textContent = randomCatIcon
+      
+  </script>

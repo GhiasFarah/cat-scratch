@@ -1,0 +1,40 @@
+<!-- Loop over each object in the posts array -->
+{{#each posts as |post| }}
+<div class="row mb-4 post">
+  <div class="col-md-5">
+    <h2 >
+      <a class="titles" href="/post/{{post.id}}">{{post.name}}</a>
+    </h2>
+    <p>
+      <span class="titles2" for="img" aria-label="money"></span>
+
+
+    </p>
+    <p>Created by {{post.user.name}} on {{format_date post.date_created}}</p>
+  </div>
+  <div class="col-md-7">
+    <p>
+      {{post.description}}
+    </p>
+  </div>
+</div>
+
+{{/each}}
+
+<script>
+   var catIconArr = ['🐈‍⬛', '🐈', '😻', '😹', '🐱']
+
+ console.log(randomCatIcon)
+ var titles = document.querySelectorAll('.titles')
+      for (let i = 0; i < titles.length; i++) {
+    var randomCatIcon = catIconArr[Math.floor(Math.random() * 5)]
+        console.log(titles[i].textContent)
+        titles[i].textContent = randomCatIcon + ' ' + titles[i].textContent
+      }
+ var titles2 = document.querySelectorAll('.titles2')
+      for (let i = 0; i < titles2.length; i++) {
+    var randomCatIcon = catIconArr[Math.floor(Math.random() * 5)]
+        console.log(titles2[i].textContent)
+        titles2[i].textContent = randomCatIcon + ' ' + titles2[i].textContent
+      }
+</script>
