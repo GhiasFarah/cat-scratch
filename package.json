@@ -28,5 +28,13 @@
     "eslint": "^7.12.1",
     "eslint-config-prettier": "^6.15.0",
     "prettier": "^2.1.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GhiasFarah/cat-scratch.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GhiasFarah/cat-scratch/issues"
+  },
+  "homepage": "https://github.com/GhiasFarah/cat-scratch#readme"
 }
